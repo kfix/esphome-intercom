@@ -2938,7 +2938,8 @@ def offered_pcm_formats(
                 or parsed["ptime"] not in {0, 20}
             ):
                 continue
-        elif encoding not in {"L16", "L24", "PCMA", "PCMU", "OPUS", "G722"}:
+        #elif encoding not in {"L16", "L24", "PCMA", "PCMU", "OPUS", "G722"}:
+        elif encoding not in {"L24", "PCMA", "PCMU", "OPUS", "G722"}:
             continue
         out.append(
             RtpPcmFormat(
